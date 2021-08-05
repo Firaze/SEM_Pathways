@@ -145,7 +145,7 @@ def calculate_weighted_edges(triad_cliques, adj_matrix,inv_nodes_renamed):
 
 def evaluate_edges(weighted_edges):
     to_remove=[]
-    signify_values={}
+    equi_values={}
     essential_edges=[]
     #for each weighted edge
     for x in weighted_edges.items():
@@ -170,8 +170,8 @@ def evaluate_edges(weighted_edges):
         else:
             essential_edges.append(x[0])
         if (ones==0):
-            signify_values[x[0]]=round((minus+zeros)/(zeros*minus+1)*(zeros)/(minus+1),3)
+            equi_values[x[0]]=round((minus+zeros)/(zeros*minus+1)*(zeros)/(minus+1),3)
         else:
-            signify_values[x[0]]=0
-    return to_remove, signify_values, essential_edges
+            equi_values[x[0]]=0
+    return to_remove, equi_values, essential_edges
 
