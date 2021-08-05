@@ -1,0 +1,12 @@
+channels:
+  - conda-forge
+dependencies:
+  - appmode
+  - IPython
+  - pip
+  - matplotlib
+  - pip:
+    - semopy
+    - pyvis
+    - ipywidgets
+    - networkx
