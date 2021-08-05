@@ -165,7 +165,7 @@ def evaluate_edges(weighted_edges):
             else:
                 m=(zeros+minus)/2
                 #remove crition
-                if ((minus+zeros)/(zeros*minus+1)*zeros/(minus+1)>((minus+zeros)/(m*m+1))*zeros/(minus+1)):
+                if ((minus+zeros)/(zeros*minus+1)*zeros/(minus+1)>((m+m)/(m*m+1))*m/(m+1)):
                     to_remove.append(x[0])
         else:
             essential_edges.append(x[0])
