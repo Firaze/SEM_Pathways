@@ -60,7 +60,7 @@ else:
     #does the SEM analysis, weight every edge and remove any invalid triad in the list of cliques
     weighted_edges,triad_cliques=calculate_weighted_edges(triad_cliques, adj_matrix,inv_nodes_renamed)
     #calculate which edges must be removed, the edges that must be kept and all their significative values 
-    to_remove, signify_values, essential_edges=evaluate_edges(weighted_edges)
+    to_remove, equi_values, essential_edges=evaluate_edges(weighted_edges)
     relabel={}
     #relabel the nodes of the graph to obtain the real names of the genes
     for e,node in enumerate( G.nodes()):
@@ -103,11 +103,11 @@ else:
                         continue
                     color="red"
                     size=3
-                    value+=", significativity:  "+str(signify_values[str(start_node)+","+str(to_node)])
+                    value+=", equilibrium factor:  "+str(equi_values[str(start_node)+","+str(to_node)])
                 else:
                     color="green"
                     size=3
-                    value+=", significativity:  "+str(signify_values[str(start_node)+","+str(to_node)])
+                    value+=", equilibrium factor:  "+str(equi_values[str(start_node)+","+str(to_node)])
                 if ((str(start_node)+","+str(to_node)) in essential_edges):   
                     isessential="Essential "
                 if (weight==1):
