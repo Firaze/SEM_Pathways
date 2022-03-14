@@ -7,18 +7,12 @@ from methods import *
 #Network(notebook=True)
 
 # makes Network show itself with repr_html
-pathways_name=pd.read_csv("data/pathways.tsv", sep='\t')["pathway_name"]
-
-#excange of pathway to make easier the findings of the (interesting) pathway on the 25th position 
-tmp=pathways_name.iloc[0]
-pathways_name.iloc[0]=pathways_name.iloc[25]
-pathways_name.iloc[25]=tmp
-
+pathways_list=pd.read_csv("data/pathways_list.csv")["0"].values
 st.set_page_config(layout="wide")
 
 #populating sidebar
 st.sidebar.title('Choose a pathway')
-option=st.sidebar.selectbox('',pathways_name)
+option=st.sidebar.selectbox('',pathways_list)
 normal_edges=st.sidebar.checkbox('Show expression/suppression edges')
 removed_edges=st.sidebar.checkbox('Show removed edges',value=True)
 st.sidebar.text("Edge legend:")
