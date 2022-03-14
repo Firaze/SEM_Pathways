@@ -4,7 +4,6 @@ import networkx as nx
 import matplotlib.pyplot as plt
 from pyvis.network import Network
 from methods import *
-import PIL
 #Network(notebook=True)
 
 # makes Network show itself with repr_html
