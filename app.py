@@ -6,8 +6,8 @@ from pyvis.network import Network
 from methods import *
 #Network(notebook=True)
 
-# makes Network show itself with repr_html
 pathways_list=pd.read_csv("data/pathways_list.csv")["0"].values
+
 st.set_page_config(layout="wide")
 
 #populating sidebar
