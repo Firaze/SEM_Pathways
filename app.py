@@ -13,12 +13,13 @@ pathways_name=pd.read_csv("data/pathways.tsv", sep='\t')["pathway_name"]
 tmp=pathways_name.iloc[0]
 pathways_name.iloc[0]=pathways_name.iloc[25]
 pathways_name.iloc[25]=tmp
-
+print(len(pathways_name))
 st.set_page_config(layout="wide")
 
 #filter non-existing patways
 pathways=[(x,read_pathway(x)) for x in pathways_name]
 pathways_name=[x[0] for x in pathways if len(x[1])>0]
+print(len(pathways_name))
 
 
 #populating sidebar
