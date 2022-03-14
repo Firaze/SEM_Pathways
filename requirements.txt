@@ -4,3 +4,4 @@ pandas==1.2.4
 pyvis==0.1.9
 streamlit==0.83.0
 semopy==2.2.2
+matplotlib==3.5.1
