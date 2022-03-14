@@ -16,6 +16,11 @@ pathways_name.iloc[25]=tmp
 
 st.set_page_config(layout="wide")
 
+#filter non-existing patways
+pathways=[(x,read_pathway(x)) for x in pathways_name)
+pathways_name=[x[0] if len(x[1])>0 for x in pathways]
+
+
 #populating sidebar
 st.sidebar.title('Choose a pathway')
 option=st.sidebar.selectbox('',pathways_name)
