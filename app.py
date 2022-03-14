@@ -18,7 +18,7 @@ st.set_page_config(layout="wide")
 
 #filter non-existing patways
 pathways=[(x,read_pathway(x)) for x in pathways_name]
-pathways_name=[x[0] if len(x[1])>0 for x in pathways]
+pathways_name=[x[0] for x in pathways if len(x[1])>0]
 
 
 #populating sidebar
