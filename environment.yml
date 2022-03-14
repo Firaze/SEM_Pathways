@@ -3,6 +3,7 @@ channels:
 dependencies:
   - pip
   - matplotlib
+  - networkx
   - pip:
     - semopy
     - pyvis
