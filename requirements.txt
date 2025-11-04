@@ -1,7 +1,7 @@
 scikit-learn
 networkx==2.5.1
 numpy
-pandas==1.2.4
+pandas
 pyvis==0.1.9
 streamlit==0.83.0
 semopy==2.3.11
