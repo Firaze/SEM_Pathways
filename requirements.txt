@@ -7,4 +7,5 @@ streamlit==0.83.0
 semopy==2.3.11
 matplotlib==3.5.1
 graphviz
+setuptools
 protobuf<3.21.0
