@@ -4,7 +4,7 @@ networkx==2.5.1
 numpy<2
 pandas
 pyvis==0.1.9
-streamlit==0.83.0
+streamlit
 semopy==2.3.11
 matplotlib==3.5.1
 graphviz
