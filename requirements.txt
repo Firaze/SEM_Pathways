@@ -9,3 +9,4 @@ matplotlib==3.5.1
 graphviz
 setuptools==66.1.1
 protobuf<3.21.0
+standard-imghdr
